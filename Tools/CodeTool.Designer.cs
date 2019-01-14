@@ -32,10 +32,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btCopy = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btGenerate = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btGenFile = new System.Windows.Forms.Button();
             this.tbExtend = new System.Windows.Forms.TextBox();
+            this.btGenFile = new System.Windows.Forms.Button();
+            this.btGenerate = new System.Windows.Forms.Button();
+            this.btGetURLS = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,18 +91,9 @@
             this.textBox1.Size = new System.Drawing.Size(488, 460);
             this.textBox1.TabIndex = 0;
             // 
-            // btGenerate
-            // 
-            this.btGenerate.Location = new System.Drawing.Point(3, 3);
-            this.btGenerate.Name = "btGenerate";
-            this.btGenerate.Size = new System.Drawing.Size(64, 24);
-            this.btGenerate.TabIndex = 2;
-            this.btGenerate.Text = "生成代码";
-            this.btGenerate.UseVisualStyleBackColor = true;
-            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btGetURLS);
             this.panel1.Controls.Add(this.tbExtend);
             this.panel1.Controls.Add(this.btGenFile);
             this.panel1.Controls.Add(this.btGenerate);
@@ -112,9 +104,17 @@
             this.panel1.Size = new System.Drawing.Size(494, 30);
             this.panel1.TabIndex = 4;
             // 
+            // tbExtend
+            // 
+            this.tbExtend.Location = new System.Drawing.Point(73, 5);
+            this.tbExtend.Name = "tbExtend";
+            this.tbExtend.Size = new System.Drawing.Size(160, 21);
+            this.tbExtend.TabIndex = 4;
+            this.tbExtend.Text = "md";
+            // 
             // btGenFile
             // 
-            this.btGenFile.Location = new System.Drawing.Point(129, 5);
+            this.btGenFile.Location = new System.Drawing.Point(239, 3);
             this.btGenFile.Name = "btGenFile";
             this.btGenFile.Size = new System.Drawing.Size(64, 24);
             this.btGenFile.TabIndex = 3;
@@ -122,13 +122,25 @@
             this.btGenFile.UseVisualStyleBackColor = true;
             this.btGenFile.Click += new System.EventHandler(this.btGenFile_Click);
             // 
-            // tbExtend
+            // btGenerate
             // 
-            this.tbExtend.Location = new System.Drawing.Point(73, 5);
-            this.tbExtend.Name = "tbExtend";
-            this.tbExtend.Size = new System.Drawing.Size(50, 21);
-            this.tbExtend.TabIndex = 4;
-            this.tbExtend.Text = "md";
+            this.btGenerate.Location = new System.Drawing.Point(3, 3);
+            this.btGenerate.Name = "btGenerate";
+            this.btGenerate.Size = new System.Drawing.Size(64, 24);
+            this.btGenerate.TabIndex = 2;
+            this.btGenerate.Text = "生成代码";
+            this.btGenerate.UseVisualStyleBackColor = true;
+            this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
+            // 
+            // btGetURLS
+            // 
+            this.btGetURLS.Location = new System.Drawing.Point(310, 4);
+            this.btGetURLS.Name = "btGetURLS";
+            this.btGetURLS.Size = new System.Drawing.Size(75, 23);
+            this.btGetURLS.TabIndex = 5;
+            this.btGetURLS.Text = "抓取页面所有url并下载";
+            this.btGetURLS.UseVisualStyleBackColor = true;
+            this.btGetURLS.Click += new System.EventHandler(this.btGetURLS_Click);
             // 
             // CodeTool
             // 
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox tbExtend;
         private System.Windows.Forms.Button btGenFile;
+        private System.Windows.Forms.Button btGetURLS;
     }
 }
 
