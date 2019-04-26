@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace Tools
+namespace DEVGIS.Tools
 {
     public partial class CodeTool : Form
     {
@@ -211,5 +211,11 @@ namespace Tools
             return retVal;
         }
         #endregion
+
+        private void tsbFileName_Click(object sender, EventArgs e)
+        {
+            FileNameTool fileNameTool = new FileNameTool();
+            fileNameTool.Show();
+        }
     }
 }

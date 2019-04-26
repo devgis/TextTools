@@ -1,4 +1,4 @@
-﻿namespace Tools
+﻿namespace DEVGIS.Tools
 {
     partial class CodeTool
     {
@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CodeTool));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btCopy = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btGetURLS = new System.Windows.Forms.Button();
             this.tbExtend = new System.Windows.Forms.TextBox();
             this.btGenFile = new System.Windows.Forms.Button();
             this.btGenerate = new System.Windows.Forms.Button();
-            this.btGetURLS = new System.Windows.Forms.Button();
+            this.toolMain = new System.Windows.Forms.ToolStrip();
+            this.tsbFileName = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.toolMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -46,14 +50,16 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btCopy, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btCopy, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.toolMain, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -64,16 +70,16 @@
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(497, 33);
+            this.textBox2.Location = new System.Drawing.Point(497, 63);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(489, 460);
+            this.textBox2.Size = new System.Drawing.Size(489, 430);
             this.textBox2.TabIndex = 1;
             // 
             // btCopy
             // 
-            this.btCopy.Location = new System.Drawing.Point(497, 3);
+            this.btCopy.Location = new System.Drawing.Point(497, 33);
             this.btCopy.Name = "btCopy";
             this.btCopy.Size = new System.Drawing.Size(75, 23);
             this.btCopy.TabIndex = 3;
@@ -84,11 +90,11 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 33);
+            this.textBox1.Location = new System.Drawing.Point(3, 63);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(488, 460);
+            this.textBox1.Size = new System.Drawing.Size(488, 430);
             this.textBox1.TabIndex = 0;
             // 
             // panel1
@@ -98,11 +104,21 @@
             this.panel1.Controls.Add(this.btGenFile);
             this.panel1.Controls.Add(this.btGenerate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(494, 30);
             this.panel1.TabIndex = 4;
+            // 
+            // btGetURLS
+            // 
+            this.btGetURLS.Location = new System.Drawing.Point(310, 4);
+            this.btGetURLS.Name = "btGetURLS";
+            this.btGetURLS.Size = new System.Drawing.Size(75, 23);
+            this.btGetURLS.TabIndex = 5;
+            this.btGetURLS.Text = "抓取页面所有url并下载";
+            this.btGetURLS.UseVisualStyleBackColor = true;
+            this.btGetURLS.Click += new System.EventHandler(this.btGetURLS_Click);
             // 
             // tbExtend
             // 
@@ -132,15 +148,26 @@
             this.btGenerate.UseVisualStyleBackColor = true;
             this.btGenerate.Click += new System.EventHandler(this.btGenerate_Click);
             // 
-            // btGetURLS
+            // toolMain
             // 
-            this.btGetURLS.Location = new System.Drawing.Point(310, 4);
-            this.btGetURLS.Name = "btGetURLS";
-            this.btGetURLS.Size = new System.Drawing.Size(75, 23);
-            this.btGetURLS.TabIndex = 5;
-            this.btGetURLS.Text = "抓取页面所有url并下载";
-            this.btGetURLS.UseVisualStyleBackColor = true;
-            this.btGetURLS.Click += new System.EventHandler(this.btGetURLS_Click);
+            this.tableLayoutPanel1.SetColumnSpan(this.toolMain, 2);
+            this.toolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbFileName});
+            this.toolMain.Location = new System.Drawing.Point(0, 0);
+            this.toolMain.Name = "toolMain";
+            this.toolMain.Size = new System.Drawing.Size(989, 25);
+            this.toolMain.TabIndex = 5;
+            this.toolMain.Text = "文件名工具";
+            // 
+            // tsbFileName
+            // 
+            this.tsbFileName.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbFileName.Image = ((System.Drawing.Image)(resources.GetObject("tsbFileName.Image")));
+            this.tsbFileName.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFileName.Name = "tsbFileName";
+            this.tsbFileName.Size = new System.Drawing.Size(71, 22);
+            this.tsbFileName.Text = "文件名管理";
+            this.tsbFileName.Click += new System.EventHandler(this.tsbFileName_Click);
             // 
             // CodeTool
             // 
@@ -155,6 +182,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolMain.ResumeLayout(false);
+            this.toolMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -170,6 +199,8 @@
         private System.Windows.Forms.TextBox tbExtend;
         private System.Windows.Forms.Button btGenFile;
         private System.Windows.Forms.Button btGetURLS;
+        private System.Windows.Forms.ToolStrip toolMain;
+        private System.Windows.Forms.ToolStripButton tsbFileName;
     }
 }
 

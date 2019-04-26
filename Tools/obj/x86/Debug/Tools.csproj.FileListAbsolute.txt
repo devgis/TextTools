@@ -31,3 +31,13 @@ D:\LiYafei\Github\TextTools\Tools\obj\x86\Debug\Tools.csproj.CoreCompileInputs.c
 D:\LiYafei\Github\TextTools\Tools\obj\x86\Debug\Tools.exe
 D:\LiYafei\Github\TextTools\Tools\obj\x86\Debug\Tools.pdb
 D:\LiYafei\Github\TextTools\Tools\bin\Debug\Tools.exe.config
+E:\Work\GitHub\TextTools\Tools\bin\Debug\Tools.exe.config
+E:\Work\GitHub\TextTools\Tools\bin\Debug\Tools.exe
+E:\Work\GitHub\TextTools\Tools\bin\Debug\Tools.pdb
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\Tools.csprojResolveAssemblyReference.cache
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\Tools.csproj.GenerateResource.Cache
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\Tools.exe
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\Tools.pdb
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\DEVGIS.Tools.CodeTool.resources
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\DEVGIS.Tools.Properties.Resources.resources
+E:\Work\GitHub\TextTools\Tools\obj\x86\Debug\DEVGIS.Tools.FileNameTool.resources
